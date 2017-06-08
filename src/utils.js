@@ -29,6 +29,8 @@ module.exports.getRequireLoader = function(filePath, chunkName, moduleName, inli
     '})'
   ];
 
+ console.log(result);
+
   return inline ? result.join('') : result.join('\n');
 };
 
@@ -40,6 +42,7 @@ module.exports.getSystemLoader = function(filePath, moduleName, inline) {
     '  })'
   ];
 
+ console.log(result);
   return inline ? result.join('') : result.join('\n');
 };
 

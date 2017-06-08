@@ -94,12 +94,12 @@ module.exports = function(source, sourcemap) {
       replacement = utils.getRequireLoader(filePath, chunkName, moduleName, inline, isJs);
     }
 
-    if (debug) {
+    //if (debug) {
       console.log('[angular-router-loader]: --DEBUG--');
       console.log('[angular-router-loader]: File: ' + resourcePath);
       console.log('[angular-router-loader]: Original: ' + match);
       console.log('[angular-router-loader]: Replacement: ' + replacement);
-    }
+    //}
 
     return replacement;
   });
