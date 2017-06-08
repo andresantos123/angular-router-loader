@@ -24,7 +24,7 @@ module.exports.getRequireLoader = function(filePath, chunkName, moduleName, inli
   var result = [
     'loadChildren: () => new Promise(function (resolve) {',
     '  ' + (isJs ? 'require' : '(require as any)') + '.ensure([], function (' + (isJs ? 'require' : 'require: any') + ') {',
-    '    resolve(' + requireString + ');console.log(\'carregou rota\');  ',
+    '    resolve(' + requireString + ');console.log(\'carregou rota\'); console.log(\'' + requireString + '\'); console.log(' + webpackChunkName + ');  ',
     '  }' + webpackChunkName + ');',
     '})'
   ];
